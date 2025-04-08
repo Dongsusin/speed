@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const screen = document.querySelector("#screen");
-  const result = document.querySelector("#result");
+  const screen = document.querySelector("#screen"); //클릭 화면
+  const result = document.querySelector("#result"); //점수
 
   let startTime; // 시작시간
   let endTime; // 끝나는 시간
   let responseTime; // 측정시간
   let records = []; // 평균 반응 속도 구할 빈 배열
   let timeoutId; // setTimeout 함수를 담을 변수
-
+  //시작 이벤트
   screen.addEventListener("click", () => {
     if (screen.classList.contains("waiting")) {
       screen.classList.replace("waiting", "ready");
@@ -31,8 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 0) / records.length; // 평균 반응 속도
       result.textContent =
         "현재 : " + responseTime + " ms" + " " + "평균 속도 : " + Avg;
-      //   startTime = null;
-      //   endTime = null; 여기서 null 이거 없어도 되지 않나?
       screen.classList.replace("now", "waiting");
       screen.textContent = "클릭해서 시작하세요";
     }

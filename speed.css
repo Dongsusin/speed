@@ -1,8 +1,23 @@
-#screen {
-  width: 300px;
-  height: 200px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 50px;
+  font-weight: 700;
+}
+#result {
+  width: 100vw;
+  height: 10vh;
   text-align: center;
   user-select: none;
+  line-height: 10vh;
+}
+#screen {
+  width: 100vw;
+  height: 90vh;
+  text-align: center;
+  user-select: none;
+  line-height: 90vh;
 }
 #screen.waiting {
   background-color: aqua;
